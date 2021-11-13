@@ -6,16 +6,28 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <div id=div-canvas></div>
-        <div id=slider-div>
+        <div id=ui>
             <input type="range" id= slider name="slider" 
                 min="1" max="100" value="50" onchange="updateGrid(this.value)">
-                <br>
-                <label for="slider">
-                    Canvas dimensions: 
-                    <span class=slider-value></span> x <span class=slider-value></span>
-                </label>
+            <br>
+            <label for="slider">
+                Canvas dimensions: 
+                <span class=slider-value></span> x <span class=slider-value></span>
+            </label>
+            <div id=color-picker>
+                <div id=black class=color-selection></div>
+                <div id=white class=color-selection></div>
+                <div id=red class=color-selection></div>
+                <div id=orange class=color-selection></div>
+                <div id=yellow class=color-selection></div>
+                <div id=green class=color-selection></div>
+                <div id=blue class=color-selection></div>
+                <div id=indigo class=color-selection></div>
+                <div id=violet class=color-selection></div>
+            </div>
+            <button id=clear-canvas>Clear Canvas</button>
         </div>
+        <div id=div-canvas></div>
     </body>
     <script src="script.js"></script>
 </html>

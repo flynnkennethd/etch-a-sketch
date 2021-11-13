@@ -1,9 +1,10 @@
 /*declare variables for canvas, grid dimensions,
-grid area, slider*/
+grid area, slider,color selectors and main color variable*/
 const canvas = document.querySelector('#div-canvas')
 let gridWidth = 50;
 let gridArea = gridWidth * gridWidth;
 const slider = document.querySelector('#slider');
+let color = 'black';
 
 //function to create grid
 function createGrid(width) {
@@ -17,10 +18,12 @@ function createGrid(width) {
     const sketchDivs = document.querySelectorAll('.sketch-div');
     sketchDivs.forEach(element => {
         element.addEventListener('mouseover', function( event ) {
-            event.target.classList.add('touched');
+            event.target.style.backgroundColor = `${color}`;
         })
     })
 }
+
+//function to update dimensions indicator
 function indicatorUpdater(value){
     const sliderIndicator = document.querySelectorAll('.slider-value');
     sliderIndicator.forEach(element => {
@@ -32,8 +35,11 @@ function indicatorUpdater(value){
 function clearGrid() {
     canvas.innerHTML = '';
 }
-function updateGrid (width) {
+
+//function to update grid with new dimensions
+function updateGrid(width) {
     clearGrid();
     createGrid(width);
     indicatorUpdater(width);
 }
+window.onload = updateGrid(slider.value);

@@ -3,16 +3,69 @@
     margin: 0;
 }
 #div-canvas {
-    height: 800px;
-    width: 800px;
+    height: 700px;
+    width: 700px;
     display: grid;
     border-style: solid;
     border-width: 2px;
     margin: auto;
+    flex-shrink: 0;
+}
+body {
+    display: flex;
+    justify-content: space-between;
+}
+#ui {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .sketch-div {
     background-color: white;
 }
-.touched {
-    background-color: grey;
+#color-picker {
+    
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    flex-wrap: wrap;
+}
+.color-selection {
+    margin: 1px;
+    border-style: solid;
+    border-width: 1px;
+    height: 40px;
+    width: 40px;
+}
+#black {
+    background-color: black;
+}
+#white {
+    background-color: white;
+}
+#red {
+    background-color: red;
+}
+#orange {
+    background-color: orange;
+}
+#yellow {
+    background-color: yellow;
+}
+#green {
+    background-color: green;
+}
+#blue {
+    background-color: blue;
+}
+#indigo {
+    background-color: indigo;
+}
+#violet {
+    background-color: #6600cc;
+}
+#rainbow {
+    background:linear-gradient(90deg, Red, Orange, Yellow, Green, Blue, Indigo,#6600cc);
+}
+#clear-canvas {
+
 }
