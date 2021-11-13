@@ -12,6 +12,8 @@
     flex-shrink: 0;
 }
 body {
+    /*please for the love of god change this to grid. 
+    it will make your life easier i think.*/
     display: flex;
     justify-content: space-between;
 }
@@ -24,7 +26,6 @@ body {
     background-color: white;
 }
 #color-picker {
-    
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     flex-wrap: wrap;
@@ -36,8 +37,14 @@ body {
     height: 40px;
     width: 40px;
 }
+.color-selection:hover {
+    box-shadow: inset 0 0 10px;
+}
 #black {
     background-color: black;
+}
+#black:hover {
+    box-shadow: inset 0 0 10px white;
 }
 #white {
     background-color: white;

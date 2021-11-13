@@ -1,10 +1,29 @@
-/*declare variables for canvas, grid dimensions,
-grid area, slider,color selectors and main color variable*/
+/*declare variables for canvas and slider*/
 const canvas = document.querySelector('#div-canvas')
-let gridWidth = 50;
-let gridArea = gridWidth * gridWidth;
 const slider = document.querySelector('#slider');
+
+//color buttons and color variable
 let color = 'black';
+const black = document.querySelector('#black');
+const white = document.querySelector('#white');
+const red = document.querySelector('#red');
+const orange = document.querySelector('#orange');
+const yellow = document.querySelector('#yellow');
+const green = document.querySelector('#green');
+const blue = document.querySelector('#blue');
+const indigo = document.querySelector('#indigo');
+const violet = document.querySelector('#violet');
+
+//color updater
+black.onclick =() => color = 'black';
+white.onclick =() => color = 'white';
+red.onclick =() => color = 'red';
+orange.onclick =() => color = 'orange';
+yellow.onclick =() => color = 'yellow';
+green.onclick =() => color = 'green';
+blue.onclick =() => color = 'blue';
+indigo.onclick =() => color = 'indigo';
+violet.onclick =() => color = '#6600cc';
 
 //function to create grid
 function createGrid(width) {
@@ -42,4 +61,5 @@ function updateGrid(width) {
     createGrid(width);
     indicatorUpdater(width);
 }
+
 window.onload = updateGrid(slider.value);
