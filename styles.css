@@ -1,39 +1,66 @@
 * {
     padding: 0;
-    margin: 0;
+    margin: 0;;
+}
+html, body {
+    height: 100%;
+    background-color: #e5e7eb;
 }
 #div-canvas {
-    height: 700px;
-    width: 700px;
+    height: 750px;
+    width: 750px;
     display: grid;
     border-style: solid;
     border-width: 2px;
     margin: auto;
-    flex-shrink: 0;
 }
 body {
     /*please for the love of god change this to grid. 
     it will make your life easier i think.*/
+
+    /*no, i don't think i will ;)*/
+
     display: flex;
     justify-content: space-between;
+    flex-direction: column;;
+}
+header {
+    text-align: center;
+    background-color: #1f2937;
+    color: #e5e7eb;
+}
+h1 {
+    font-size: 5em;
 }
 #ui {
+    width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
+    padding: 10px;
+    margin-top: 10px;
 }
 .sketch-div {
     background-color: white;
 }
-#color-picker {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    flex-wrap: wrap;
+#slider-container {
+    flex:1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    padding: 10px, 100px;
+    max-width: 500px;
 }
-.color-selection {
-    margin: 1px;
-    border-style: solid;
-    border-width: 1px;
-    height: 40px;
-    width: 40px;
+#color-selection {
+    width: 100px;
+    margin: 5px 0px;
+}
+#clear-canvas {
+    width: 150px;
+}
+footer {
+    background-color: #1f2937;
+    color: #e5e7eb;
+    text-align: center;
+    padding: 5px 20px;
 }

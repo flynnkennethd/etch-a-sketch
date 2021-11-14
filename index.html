@@ -6,18 +6,33 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <div id=ui>
-            <input type="range" id= slider name="slider" 
-                min="1" max="100" value="50" onchange="updateGrid(this.value)">
-            <br>
-            <label for="slider">
-                Canvas dimensions: 
-                <span class=slider-value></span> x <span class=slider-value></span>
-            </label>
-            <input id=color-selection type="color" onchange="colorChange(this.value)">
-            <button id=clear-canvas onclick="updateGrid(slider.value)">Clear Canvas</button>
-        </div>
-        <div id=div-canvas></div>
+        <header>
+            <h1>SketchBox</h1>
+        </header>
+        <main>
+            <div id=div-canvas></div>
+            <div id=ui>
+                <div id=color-container>
+                    <input id=color-selection type="color" name="color-selection"
+                        onchange="colorChange(this.value)">
+                        <br>
+                    <label for="color-selection">Choose a color</label>
+                </div>
+                <div id=slider-container>
+                    <input type="range" id= slider name="slider" 
+                        min="1" max="100" value="50" onchange="updateGrid(this.value)">
+                        <br>
+                    <label for="slider">
+                        Canvas dimensions: 
+                        <span class=slider-value></span> x <span class=slider-value></span>
+                    </label>
+                    </div>
+                <button id=clear-canvas onclick="updateGrid(slider.value)">Clear Canvas</button>
+            </div>
+        </main>
+        <footer>
+            <p>Webpage by Kenneth Flynn for The Odin Project &copy;</p>
+        </footer>
     </body>
     <script src="script.js"></script>
 </html>
