@@ -47,4 +47,3 @@ function updateGrid(width) {
 }
 
 window.onload = updateGrid(slider.value);
-window.onclick = toggle()

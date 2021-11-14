@@ -4,6 +4,7 @@
 }
 html, body {
     height: 100%;
+    width: 100%;
     background-color: #e5e7eb;
 }
 #div-canvas {
@@ -33,10 +34,10 @@ h1 {
     font-size: 5em;
 }
 #ui {
-    width: 100%;
     display: flex;
     justify-content: space-around;
     padding: 10px;
+    padding-right: 0;
     margin-top: 10px;
 }
 .sketch-div {
